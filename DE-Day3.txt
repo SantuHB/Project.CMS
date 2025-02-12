@@ -1,0 +1,240 @@
+
+	Static class Demo
+	{
+
+		int count=100;
+		static int code=200;
+		static Demo()
+		{
+		}
+		static Demo(int num`1,int num2)
+		{
+		}
+
+		public static void GetData()
+		{
+			cw("Data");
+		}
+	
+	}
+
+	p s v m 
+
+	
+	interface I1
+	{
+	}
+
+	interface I2
+	{
+	}
+
+	
+	Nullable Type
+	=============
+		Value type
+			----> Primitive data type --int ,char ..double...bool..
+				struct ..enum ..tuple ...
+		reference type	
+			---> string , class , array , collection ......
+			Null 
+
+  	Used to assign null value to Value types .
+	-------------------------------------------
+
+	When ???????
+	
+	int? ProjectId;
+
+	Employee Table 
+
+	int   varchar   money             	int
+	EmpId Name      ClientAllowance 	ProjectId
+
+	101   e1        10000			Null 
+
+
+
+	Serialization
+	=============
+
+		Object into stream of bytes and stored in a file in encrypted format
+		Storage 
+	De-Serialization
+	===============
+
+		converts Stream of bytes into original object 
+		Retrieval 
+	using System.Runtime.Serialization;
+	Serialize()
+	DeSerialize()
+
+	Binary 
+	-----
+		Binary format --- file 
+		All fields --private , public .... serialized
+
+	XML   (Universal Data)
+	----
+		XML format and XML doc 
+		Public fields serialized
+
+	JSON (JavaScript Object Notation)   --REST SERVICE 
+	----
+		JSON format 
+		string ---light weight --- store data
+		Object .. Array 
+
+	
+	<EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
+
+LINQ (LANGUAGE INTEGRATED QUERY)
+	--------------------------------
+
+	New feature C# 3.0 Or .Net FW 3.0
+
+	Linq to SQL 
+
+	ORM(Object Relational Mapping) Framework
+	----------------------------------------
+	EF (Entity Framework)     &&    EF (Entity Framework) CORE 
+
+	Store Data 
+	---------->
+
+	Object World 			Relational World
+
+	Data Source 
+		----> Files Or ExcelSheet  Or Object Or List Or Array
+		      Xml Docs Or RDBMS
+
+	Uniform syntax to work with different Data sources.
+	---------------------------------------------------
+	
+	Native Programming Lang(C# Or VB.Net) to work Sql Queries 
+
+	ORM(Object Relational Mapping) Framework ---
+	----------------------------------------
+		LINQ and EF or EF Core
+
+	Object World		mapping		Relationl World
+
+	LINQ 
+	----
+		Linq to Object 
+		Linq to XML 
+		Linq to Sql 
+
+	using System.Linq;
+
+	How ??? 
+	
+	2 ways 
+	------
+
+	Query Expression Syntax
+	-----------------------
+		from <variableName> in <Collection-or-Source> 
+		where <Condition> order by select <variableName>;
+
+	Method Invocation Syntax (Lambda Expression)
+	-------------------------------------------
+		<Collection-Or-Source>.Where(<Lambda-Exp).
+		OrderByDescending(<Lambd-Exp>).Select(<Lambd-Exp>);
+	
+	Group By SQL 
+
+		We can print only those column which are part of group by key
+		+ Aggregate Functions(Sum , Avg,Max,Min,Count).
+
+	LINQ 
+
+	Location + Name +  Aggregate Function  ---YES
+
+	
+	Agggregate Functions
+
+	ALl , Any , In in LINQ
+
+
+	Library File which contains Common Functionalities which
+	are used in more project.
+
+	No main method.
+
+	Class and Methods must be public. 
+
+	First() 
+		It returns first object if found, else throw and exception.
+		It can't handle null value.
+
+	FirstOrDefault()
+		It returns first object matching with condition,
+		else returns default value.
+		It can handle null value. 
+
+	Single() and SingleOrDefault()
+
+		For Scenario where we except single row will returned.
+
+		It returns object if found, else throw and exception if it contains
+		more than one object.
+		It can't handle null value.
+
+	SingleOrDefault()
+
+		It returns object matching with condition,
+		else returns default value.
+		It can handle null value. 
+
+Lambda Expressions
+
+It is an inline delegate
+
+It can be used to create expression or statements.
+
+It helps to create anonymous method delegate with an easy 
+
+syntax.
+
+They are used to inplace of delegate instance , compiler converts lambda expression into delegate instance at run time.
+	Lambda expression are used with LINQ Query expression.
+	Anonymous method consist of method name with method body.
+	It is created using delegate keyword without any name.
+Syntax:
+
+(input parameters) => Expression or Statements or Execution Code
+
+It consists of Lambda opertor => ( Goes to ).
+Here lambda operator used to separate input parameter from expression or statements.
+
+Anonymous types
+
+It is a type without any name.
+It contains set of public read only properties.
+They are created using new keyword with var keyword without explicitly defining type name.
+Here compiler will automatically generates type at compile time.
+It is just a placeholder and does not contain any methods or events inside it.
+It is possible to create an array of anonymous type.
+
+Anonymous types scope is limited to local block.
+They are used with Query Expression(LINQ) select statements to return subset of properties from object.
+It is used if we need to access a type only once in our program ,where type holds data temporarily and can't be reused in our application.
+
+Syntax
+var productsDetails = new {ProductID=1010,ProductName="Modile"};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
