@@ -1,0 +1,18 @@
+https://www.youtube.com/watch?v=CxSSj30Hi9ISimilar to 403 Forbidden, but specifically for use when authentication is 
+possible but has failed or not yet been provided. 
+The response must include a WWW-Authenticate header field 
+containing a challenge applicable to the requested resource.
+
+System.AggregateException: 'One or more errors occurred. (Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'System.Collections.Generic.IEnumerable`1
+
+HttpClient hc = new HttpClient();
+HttpResponseMessage customersRm = await hc.GetAsync(url);
+string customersString = await customersRm.Content.ReadAsStringAsync();
+List<Customer> custs = JsonConvert.DeserializeObject<List<Customer>>(customersString);
+Now here's the code using ReadAsAsync (even the method name is shorter!):
+
+HttpClient hc = new HttpClient();
+HttpResponseMessage customersRm = await hc.GetAsync(url);
+List<Customer> custs = await customersRm.Content.ReadAsAsync<List<Customer>>();
+
+
